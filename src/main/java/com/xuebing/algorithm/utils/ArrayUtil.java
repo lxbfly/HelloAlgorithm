@@ -38,7 +38,7 @@ public class ArrayUtil {
 		return dataSet;
 	}
 
-	private static void printArray(int[] dataSet) {
+    public static void printArray(int[] dataSet) {
 		for (int data : dataSet) {
 			System.out.print(data + "   ");
 		}
