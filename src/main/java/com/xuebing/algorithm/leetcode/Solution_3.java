@@ -20,7 +20,35 @@ package com.xuebing.algorithm.leetcode;
 public class Solution_3 {
 
     public int lengthOfLongestSubstring(String s) {
-        return 0;
+        if (s == null || s.equals(""))
+            return 0;
+        int sLen = s.length();
+        if(sLen == 1) return 1;
+        
+        StringBuilder sb = new StringBuilder();
+        int maxLen = 1;
+        for (int i = 0; i < sLen; i++) {
+            char charAt = s.charAt(i);
+            if (sb.indexOf(String.valueOf(charAt)) <= -1) {
+                sb.append(charAt);
+            } else {
+                if (maxLen < sb.length()) {
+                    maxLen = sb.length();
+                }
+                sb.delete(0, sb.indexOf(String.valueOf(charAt)) + 1);
+                sb.append(charAt);
+            }
+        }
+        if (maxLen < sb.length()) {
+            maxLen = sb.length();
+        }
+        return maxLen;
+    }
+
+    public static void main(String[] args) {
+        Solution_3 solution = new Solution_3();
+        int len = solution.lengthOfLongestSubstring("dvdf");
+        System.out.println("longest substring = " + len);
     }
 
 }
