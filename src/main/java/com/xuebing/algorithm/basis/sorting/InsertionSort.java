@@ -40,7 +40,7 @@ public class InsertionSort {
         return data;
     }
 
-    private static int[] insertionSortDesc(int[] data) {
+    public static int[] insertionSortDesc(int[] data) {
         if (data == null || data.length < 0) {
             throw new IllegalArgumentException("The array can't NULL or length less than zero.");
         }
