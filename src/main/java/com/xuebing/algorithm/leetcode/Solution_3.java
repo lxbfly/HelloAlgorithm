@@ -8,12 +8,12 @@ package com.xuebing.algorithm.leetcode;
 
 /**
  * Longest Substring Without Repeating Characters
- * 
+ *
  * @ClassName Solution_3
  * @Description Given a string, find the length of the longest substring without repeating characters. For example, the
  * longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3. For "bbbbb" the longest
  * substring is "b", with the length of 1.
- * 
+ *
  * @author gordon.li coderxb@163.com
  * @date 2015年5月4日 下午4:32:02
  */
